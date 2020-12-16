@@ -1,5 +1,8 @@
 language: erlang
 
+stages:
+  - compile
+  - test
 
 git:
   quiet: true
