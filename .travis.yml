@@ -1,10 +1,13 @@
 language: erlang
 otp_release:
-  - "23.0.3"
+  - "23.0"
 
-stages:
-  - compile
-  - test
+jobs:
+  include:
+    - stage: compile
+      script: rebar compile
+    - stage: test
+      script: rebar eunit
 
 git:
   quiet: true
